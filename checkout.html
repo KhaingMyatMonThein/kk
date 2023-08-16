@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Checkout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" ></script>
+
+</head>
+<body>
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <img src = "./image/shopping-bag-icon.png" alt = "site icon">
+                <span class = "text-uppercase fw-lighter ms-2">FashionGit</span>
+            </a>
+    
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-shopping-cart"></i>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                </button>
+               
+               <a href="./login.html"> <button type = "button" class = "btn position-relative">
+                    <i class="fa-solid fa-user" style="color: black;"></i>
+                </a>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-search"></i>
+                </button>
+            </div>
+    
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+    
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html">home</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#collection">collection</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#special">specials</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#blogs">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#about">about us</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2 border-0">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#popular">popular</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container mt-5" >
+    <h2 style="margin-top: 100pt; text-align: center;">Checkout</h2>
+    <form id="checkoutForm">
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea class="form-control" id="address" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="paymentMethod" class="form-label">Payment Method</label>
+        <select class="form-select" id="paymentMethod" required>
+          <option value="" disabled selected>Select Payment Method</option>
+          <option value="creditCard">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+      </div>
+      <div id="creditCardFields">
+        <div class="mb-3">
+          <label for="creditCard" class="form-label">Credit Card Number</label>
+          <input type="text" class="form-control" id="creditCard" required>
+        </div>
+        <div class="mb-3">
+          <label for="expiryDate" class="form-label">Expiry Date</label>
+          <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+        </div>
+        <div class="mb-3">
+          <label for="cvv" class="form-label">CVV</label>
+          <input type="text" class="form-control" id="cvv" required>
+        </div>
+      </div>
+       <a href="index.html"><button type="button" class="btn" onclick="thankYou()" style="margin-bottom: 30px; ">Place order</button></a>
+    
+    </form>
+  </div>
+ 
+
+  <script>
+    const paymentMethodSelect = document.getElementById("paymentMethod");
+    const creditCardFields = document.getElementById("creditCardFields");
+
+    paymentMethodSelect.addEventListener("change", function() {
+      if (paymentMethodSelect.value === "creditCard") {
+        creditCardFields.style.display = "block";
+      } else {
+        creditCardFields.style.display = "none";
+      }
+    });
+
+  
+    function thankYou(){
+        alert("Order place successfully!")
+    }
+  </script>
+
+
+</body>
+</html>

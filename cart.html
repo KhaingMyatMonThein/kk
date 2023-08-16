@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionGit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+   
+   
+</head>
+<body>
+  
+    
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <img src = "./image/shopping-bag-icon.png" alt = "site icon">
+                <span class = "text-uppercase fw-lighter ms-2">FashionGit</span>
+            </a>
+    
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-shopping-cart"></i>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                </button>
+               
+               <a href="./login.html"> <button type = "button" class = "btn position-relative">
+                    <i class="fa-solid fa-user" style="color: black;"></i>
+                </a>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-search"></i>
+                </button>
+            </div>
+    
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+    
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html">home</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#collection">collection</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#special">specials</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#blogs">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#about">about us</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2 border-0">
+                        <a class = "nav-link text-uppercase text-dark" href = "./index.html#popular">popular</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center align-items-center fs-1" style="margin-top: 150px;">My Cart</div>
+     
+        <div class="table-responsive">
+           <table class="table table-hover myCart w-100 m-auto mt-5">
+          
+            <thead>
+                <tr>
+                    <th scope="col">FashionGit</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="cart1">
+                    <th scope="row">1</th>
+                    <td><img src="./image/best_selling_1.jpg" alt="" class="img-fluid" style="height: 60px; width: 60px;">
+                    </td>
+                    <td>Stripe Wool Knit Sweater</td>
+                    <td>$128.00</td>
+                    <td>
+                        <div class="border w-50 d-flex justify-content-end">1</div>
+                    </td>
+                    <td>
+                        $128.00
+                        <button class="btn btn-outline-dark ms-5" id="btn1">Delete</button>
+                    </td>
+                </tr>
+           
+
+            <tr id="cart2">
+                <th scope="row">2</th>
+                <td><img src="./image/best_selling_3.jpg" alt="" class="img-fluid"style="height: 60px; width: 60px;"></td>
+                <td>Patch Colorblock Pique T-Shirt - Green_Navy</td>
+                <td>$60.00</td>
+                    <td>
+                        <div class="border w-50 d-flex justify-content-end">1</div>
+                    </td>
+                    <td>
+                        $60.00
+                        <button class="btn btn-outline-dark ms-5" id="btn1">Delete</button>
+                    </td>
+                </tr>
+
+                <tr id="total1">
+                    <th colspan="3">Total</th>
+                    <td></td>
+                    <td></td>
+                    <td id="totalAmount">$188.00</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+     
+        <div class="d-flex justify-content-center check-outBtn" style="margin-top: 30px;">
+           <a href="checkout.html" class="btn btn-dark">PROCEED TO CHECKOUT</a>
+        </div>
+     </div>
+     
+     
+        <footer class = "bg-dark py-5" style="margin-top: 50px;">
+            <div class = "container">
+                <div class = "row text-white g-4">
+                    <div class = "col-md-6 col-lg-3">
+                        <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">FashionGit</a>
+                        <p class = "text-white text-muted mt-3">Welcome to FashionGit, your ultimate destination for all things fashion!</p>
+                    </div>
+        
+                    <div class = "col-md-6 col-lg-3">
+                        <h5 class = "fw-light">Links</h5>
+                        <ul class = "list-unstyled">
+                            <li class = "my-3">
+                                <a href = "index.html" class = "text-white text-decoration-none text-muted">
+                                    <i class = "fas fa-chevron-right me-1"></i> Home
+                                </a>
+                            </li>
+                            <li class = "my-3">
+                                <a href = "index.html#collection" class = "text-white text-decoration-none text-muted">
+                                    <i class = "fas fa-chevron-right me-1"></i> Collection
+                                </a>
+                            </li>
+                            <li class = "my-3">
+                                <a href = "index.html#blogs" class = "text-white text-decoration-none text-muted">
+                                    <i class = "fas fa-chevron-right me-1"></i> Blogs
+                                </a>
+                            </li>
+                            <li class = "my-3">
+                                <a href = "index.html#about" class = "text-white text-decoration-none text-muted">
+                                    <i class = "fas fa-chevron-right me-1"></i> About Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class = "col-md-6 col-lg-3">
+                        <h5 class = "fw-light mb-3">Contact Us</h5>
+                        <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                            <span class = "me-3">
+                                <i class = "fas fa-map-marked-alt"></i>
+                            </span>
+                            <span class = "fw-light">
+                                NO(216), TimesCity , Sanchaung Township, Yangon, Myanmar
+                            </span>
+                        </div>
+                        <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                            <span class = "me-3">
+                                <i class = "fas fa-envelope"></i>
+                            </span>
+                            <span class = "fw-light">
+                                FashionGit.support@gmail.com
+                            </span>
+                        </div>
+                        <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                            <span class = "me-3">
+                                <i class = "fas fa-phone-alt"></i>
+                            </span>
+                            <span class = "fw-light">
+                                +9786 6776 236
+                            </span>
+                        </div>
+                    </div>
+        
+                    <div class = "col-md-6 col-lg-3">
+                        <h5 class = "fw-light mb-3">Follow Us</h5>
+                        <div>
+                            <ul class = "list-unstyled d-flex">
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+ 
+<script>
+    const deleteButtons = document.querySelectorAll(".btn-outline-dark"); // Select all delete buttons
+
+    deleteButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const row = button.parentNode.parentNode; // Get the parent row
+            row.remove(); // Remove the row
+
+            updateTotal(); // Update the total amount
+        });
+    });
+
+    function updateTotal() {
+        let total = 0;
+        const rows = document.querySelectorAll(".table tbody tr:not(#total1)"); // Select all rows except the total row
+
+        rows.forEach((row) => {
+            const priceCell = row.querySelector("td:nth-child(4)");
+            const quantityCell = row.querySelector("td:nth-child(5)");
+
+            const price = parseFloat(priceCell.textContent.replace("$", ""));
+            const quantity = parseInt(quantityCell.querySelector("div").textContent);
+
+            const rowTotal = price * quantity;
+            total += rowTotal;
+        });
+
+        const totalAmountCell = document.getElementById("totalAmount");
+        totalAmountCell.textContent = "$" + total.toFixed(2);
+    }
+</script>
+
+
+</body>
+</html>
+
+
+           
+          
